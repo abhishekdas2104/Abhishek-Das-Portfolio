@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhishek Das — Full Stack Web Developer</title>
+  <meta name="description" content="Portfolio of Abhishek Das — Full Stack Web Developer specializing in React, Node.js, and modern web technologies." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Lottie for animations -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== BACKGROUND GLOWING BLOBS ===== -->
+  <div class="glow-blob blob-1"></div>
+  <div class="glow-blob blob-2"></div>
+  <div class="glow-blob blob-3"></div>
+  <div class="glow-blob blob-4"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-name">ABHISHEK</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about" class="nav-link" data-section="about">ABOUT</a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience">EXPERIENCE</a></li>
+        <li><a href="#skills" class="nav-link" data-section="skills">SKILLS</a></li>
+        <li><a href="#education" class="nav-link" data-section="education">EDUCATION</a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects">PROJECTS</a></li>
+        <li><a href="#certificates" class="nav-link" data-section="certificates">CERTIFICATES</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay">
+    <div class="mobile-menu-inner">
+      <a href="#about" class="mobile-link">ABOUT</a>
+      <a href="#experience" class="mobile-link">EXPERIENCE</a>
+      <a href="#skills" class="mobile-link">SKILLS</a>
+      <a href="#education" class="mobile-link">EDUCATION</a>
+      <a href="#projects" class="mobile-link">PROJECTS</a>
+      <a href="#certificates" class="mobile-link">CERTIFICATES</a>
+      <a href="#contact" class="mobile-link">CONTACT</a>
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section id="home" class="hero-section">
+    <div class="hero-container">
+      <div class="hero-left animate-fade-up">
+        <p class="hero-greeting">Hello,</p>
+        <h1 class="hero-title">
+          This is <span class="text-pink">ABHISHEK DAS</span>, I'm a
+          <span class="text-gradient">Fullstack Web Developer</span>.
+        </h1>
+        <div class="hero-socials">
+          <a href="https://github.com/abhishekdas2104" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/abhishek-das-cse/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.instagram.com/abhishekdas_musicc/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.hackerrank.com/profile/abhishekdas2104" target="_blank" rel="noopener" aria-label="HackerRank"><i class="fa-brands fa-hackerrank"></i></a>
+          <a href="https://leetcode.com/u/abhishekdas21/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+        </div>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn-border-gradient">
+            <span>CONTACT ME <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+          <a href="cv.pdf" target="_blank" class="btn-gradient">
+            GET RESUME <i class="fa-solid fa-arrow-up-right-from-square"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-right animate-fade-up delay-200">
+        <div class="code-window">
+          <div class="code-header">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <div class="code-body" id="code-body">
+            <pre><code id="typed-code"></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section id="about" class="section about-section">
+    <!-- Section Glow -->
+    <div class="section-glow glow-top-right"></div>
+
+    <div class="section-inner">
+      <!-- WHO I AM? heading with line -->
+      <div class="about-label animate-on-scroll">
+        <span class="about-label-line"></span>
+        <span class="about-label-text">WHO I AM?</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text animate-on-scroll">
+          <p>
+            My name is <span class="text-white fw-600">Abhishek Das</span>. I am a professional and enthusiastic
+            programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and
+            explore new technologies and am passionate about problem-solving. I love almost all the stacks of
+            web application development and love to make the web more open to the world. My core skill is based
+            on JavaScript and I love to do most of the things using JavaScript. I am available for any kind of
+            job opportunity that suits my skills and interests.
+          </p>
+        </div>
+        <div class="about-image animate-on-scroll">
+          <div class="about-img-frame">
+            <img src="me.jpeg" alt="Abhishek Das" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vertical Side Tab -->
+    <div class="vertical-side-tab">
+      <span>ABOUT ME</span>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE SECTION ===== -->
+  <section id="experience" class="section">
+    <div class="section-glow glow-bottom-left"></div>
+    <div class="section-inner-wide">
+      <h2 class="section-title animate-on-scroll">Experiences</h2>
+      <div class="exp-edu-grid">
+        <div class="illustration-side animate-on-scroll">
+          <lottie-player
+            src="https://assets2.lottiefiles.com/packages/lf20_w51pcehl.json"
+            background="transparent"
+            speed="1"
+            style="width: 450px; height: 450px"
+            loop autoplay>
+          </lottie-player>
+        </div>
+        <div class="cards-side">
+          <div class="timeline-card animate-on-scroll">
+            <span class="timeline-date">(Jan 2026 - Feb 2026)</span>
+            <div class="timeline-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <h3 class="timeline-title">WEB DEVELOPMENT INTERN</h3>
+            <p class="timeline-subtitle">Prodigy Infotech</p>
+            <p class="timeline-desc">Completed 5 task-based projects focused on web development. Improved practical skills in frontend and backend technologies.</p>
+          </div>
+          <div class="timeline-card animate-on-scroll">
+            <span class="timeline-date">(2023 - Present)</span>
+            <div class="timeline-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3 class="timeline-title">SELF EMPLOYED</h3>
+            <p class="timeline-subtitle">Freelance Developer</p>
+            <p class="timeline-desc">Code and build something new every day. Continuously learning and improving my development skills.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section id="skills" class="section">
+    <div class="section-inner-wide">
+      <h2 class="section-title animate-on-scroll">Skills</h2>
+      <div class="skills-marquee-wrapper animate-on-scroll">
+        <div class="skills-marquee">
+          <div class="skills-track">
+            <div class="skill-chip"><i class="fa-brands fa-react"></i><span>React</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+            <div class="skill-chip"><i class="fa-solid fa-wind"></i><span>Tailwind</span></div>
+            <div class="skill-chip"><i class="fa-solid fa-leaf"></i><span>MongoDB</span></div>
+            <div class="skill-chip"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-python"></i><span>Python</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-java"></i><span>Java</span></div>
+            <div class="skill-chip"><i class="fa-solid fa-c"></i><span>C++</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+            <!-- Duplicate for seamless loop -->
+            <div class="skill-chip"><i class="fa-brands fa-react"></i><span>React</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+            <div class="skill-chip"><i class="fa-solid fa-wind"></i><span>Tailwind</span></div>
+            <div class="skill-chip"><i class="fa-solid fa-leaf"></i><span>MongoDB</span></div>
+            <div class="skill-chip"><i class="fa-solid fa-database"></i><span>MySQL</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-python"></i><span>Python</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-java"></i><span>Java</span></div>
+            <div class="skill-chip"><i class="fa-solid fa-c"></i><span>C++</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EDUCATION SECTION ===== -->
+  <section id="education" class="section">
+    <div class="section-glow glow-top-left"></div>
+    <div class="section-inner-wide">
+      <h2 class="section-title animate-on-scroll">Education</h2>
+      <div class="exp-edu-grid edu-reverse">
+        <div class="cards-side">
+          <div class="timeline-card animate-on-scroll">
+            <span class="timeline-date">(2023 - Present)</span>
+            <div class="timeline-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <h3 class="timeline-title">B.Tech in Computer Science & Engineering</h3>
+            <p class="timeline-subtitle">Lovely Professional University</p>
+            <p class="timeline-desc">Currently in 3rd Year</p>
+          </div>
+          <div class="timeline-card animate-on-scroll">
+            <span class="timeline-date">(2022)</span>
+            <div class="timeline-icon"><i class="fa-solid fa-school"></i></div>
+            <h3 class="timeline-title">Class 12th (CBSE)</h3>
+            <p class="timeline-subtitle">Vivekananda Kendra Vidyalaya</p>
+            <p class="timeline-desc">Percentage: 74.89%</p>
+          </div>
+          <div class="timeline-card animate-on-scroll">
+            <span class="timeline-date">(2020)</span>
+            <div class="timeline-icon"><i class="fa-solid fa-school"></i></div>
+            <h3 class="timeline-title">Class 10th (CBSE)</h3>
+            <p class="timeline-subtitle">Vivekananda Kendra Vidyalaya</p>
+            <p class="timeline-desc">Percentage: 89.6%</p>
+          </div>
+        </div>
+        <div class="illustration-side animate-on-scroll">
+          <lottie-player
+            src="https://assets4.lottiefiles.com/packages/lf20_swnrn2oy.json"
+            background="transparent"
+            speed="1"
+            style="width: 450px; height: 450px"
+            loop autoplay>
+          </lottie-player>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION (Sticky Stacking Cards) ===== -->
+  <section id="projects" class="section projects-section">
+    <div class="section-inner-wide">
+      <h2 class="section-title animate-on-scroll">Projects</h2>
+
+      <div class="projects-sticky-container">
+        <!-- Project 1 -->
+        <div class="project-sticky-card" style="--card-index: 0;">
+          <div class="project-code-window">
+            <div class="code-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <h3 class="project-card-title">MediVibe - Hospital Management System</h3>
+              <a href="https://github.com/abhishekdas2104/MediVibe---Hospital-Management-System" target="_blank" class="project-github"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="code-body project-code">
+              <pre><code><span class="ck">const</span> <span class="cv">project</span> <span class="co">=</span> {
+  <span class="cp">name</span>: <span class="cs">'MediVibe'</span>,
+  <span class="cp">tools</span>: [<span class="cs">'React.js'</span>, <span class="cs">'Node.js'</span>,
+    <span class="cs">'Express.js'</span>, <span class="cs">'MongoDB'</span>,
+    <span class="cs">'JWT'</span>, <span class="cs">'bcrypt'</span>],
+  <span class="cp">myRole</span>: <span class="cs">'Full Stack Developer'</span>,
+  <span class="cp">Description</span>: <span class="cs">'Full-stack MERN application with
+    role-based dashboards and real-time bed
+    availability tracking. Provides comprehensive
+    hospital management with secure
+    authentication.'</span>,
+};</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-sticky-card" style="--card-index: 1;">
+          <div class="project-code-window">
+            <div class="code-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <h3 class="project-card-title">YourOwnShop - E-commerce Website</h3>
+              <a href="https://github.com/abhishekdas2104/Your-Own-Shop" target="_blank" class="project-github"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="code-body project-code">
+              <pre><code><span class="ck">const</span> <span class="cv">project</span> <span class="co">=</span> {
+  <span class="cp">name</span>: <span class="cs">'YourOwnShop'</span>,
+  <span class="cp">tools</span>: [<span class="cs">'HTML'</span>, <span class="cs">'CSS'</span>,
+    <span class="cs">'Tailwind CSS'</span>, <span class="cs">'JavaScript'</span>],
+  <span class="cp">myRole</span>: <span class="cs">'Frontend Developer'</span>,
+  <span class="cp">Description</span>: <span class="cs">'Fashion &amp; clothing platform for
+    men and women with a sleek shopping
+    experience. Built with modern frontend
+    technologies for a responsive,
+    user-friendly interface.'</span>,
+};</code></pre>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-sticky-card" style="--card-index: 2;">
+          <div class="project-code-window">
+            <div class="code-header">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <h3 class="project-card-title">Land Ledger Web App</h3>
+              <a href="https://github.com/abhishekdas2104/Land-Ledger-WebApp" target="_blank" class="project-github"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div class="code-body project-code">
+              <pre><code><span class="ck">const</span> <span class="cv">project</span> <span class="co">=</span> {
+  <span class="cp">name</span>: <span class="cs">'Land Ledger Web App'</span>,
+  <span class="cp">tools</span>: [<span class="cs">'PHP'</span>, <span class="cs">'JavaScript'</span>,
+    <span class="cs">'CSS'</span>, <span class="cs">'TypeScript'</span>],
+  <span class="cp">myRole</span>: <span class="cs">'Full Stack Developer'</span>,
+  <span class="cp">Description</span>: <span class="cs">'A comprehensive web application
+    designed to simplify land record management
+    and property tax payments for farmers,
+    property owners, and government officials.
+    Features interactive maps, user dashboards,
+    and secure transactions.'</span>,
+};</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATES SECTION (Blog-style) ===== -->
+  <section id="certificates" class="section">
+    <div class="section-glow glow-bottom-right"></div>
+    <div class="section-inner-wide">
+      <h2 class="section-title animate-on-scroll">Certificates</h2>
+      <div class="blog-grid">
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-card-img">
+            <img src="nptel.png" alt="NPTEL Cloud Computing" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span><i class="fa-solid fa-building-columns"></i> NPTEL</span>
+              <span><i class="fa-solid fa-calendar"></i> 2024</span>
+            </div>
+            <h3 class="blog-card-title">NPTEL Cloud Computing</h3>
+            <p class="blog-card-desc">Comprehensive course on cloud computing fundamentals, covering cloud architectures, services, and deployment models from IIT.</p>
+            <a href="nptel.png" target="_blank" class="blog-read-more">View Certificate <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-card-img">
+            <img src="fullstack.png" alt="Full Stack Web Dev" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span><i class="fa-solid fa-building-columns"></i> GeeksforGeeks</span>
+              <span><i class="fa-solid fa-calendar"></i> 2024</span>
+            </div>
+            <h3 class="blog-card-title">Full Stack Web Dev Bootcamp</h3>
+            <p class="blog-card-desc">Intensive bootcamp covering frontend and backend web development with React, Node.js, Express, and MongoDB.</p>
+            <a href="fullstack.png" target="_blank" class="blog-read-more">View Certificate <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-card-img">
+            <img src="java.png" alt="Java Programming" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span><i class="fa-solid fa-building-columns"></i> Certification</span>
+              <span><i class="fa-solid fa-calendar"></i> 2024</span>
+            </div>
+            <h3 class="blog-card-title">Java Programming</h3>
+            <p class="blog-card-desc">Certification in Java programming covering OOP concepts, data structures, exception handling, and advanced features.</p>
+            <a href="java.png" target="_blank" class="blog-read-more">View Certificate <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <div class="blog-card animate-on-scroll">
+          <div class="blog-card-img">
+            <img src="dsa.png" alt="DSA C++" />
+          </div>
+          <div class="blog-card-body">
+            <div class="blog-meta">
+              <span><i class="fa-solid fa-building-columns"></i> Certification</span>
+              <span><i class="fa-solid fa-calendar"></i> 2024</span>
+            </div>
+            <h3 class="blog-card-title">Fundamentals of DSA (C++)</h3>
+            <p class="blog-card-desc">In-depth course on data structures and algorithms using C++, covering arrays, linked lists, trees, graphs.</p>
+            <a href="dsa.png" target="_blank" class="blog-read-more">View Certificate <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section id="contact" class="section">
+    <div class="section-inner-wide contact-section-wrapper">
+      <h2 class="section-title animate-on-scroll">Contact with me</h2>
+      <p class="contact-subtitle animate-on-scroll">If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests.</p>
+
+      <div class="contact-grid">
+        <div class="contact-form-side animate-on-scroll">
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name:</label>
+                <input type="text" name="from_name" required placeholder="John Doe" />
+              </div>
+              <div class="form-group">
+                <label>Your Email:</label>
+                <input type="email" name="reply_to" required placeholder="john@example.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Your Message:</label>
+              <textarea name="message" required placeholder="Write your message here..." rows="6"></textarea>
+            </div>
+            <button type="submit" class="btn-gradient btn-send">
+              Send Message <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+        <div class="contact-info-side animate-on-scroll">
+          <div class="contact-info-item">
+            <div class="contact-icon-circle"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <p class="info-label">Email</p>
+              <a href="mailto:abhishekdas2104@gmail.com">abhishekdas2104@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon-circle"><i class="fa-brands fa-linkedin-in"></i></div>
+            <div>
+              <p class="info-label">LinkedIn</p>
+              <a href="https://www.linkedin.com/in/abhishek-das-cse/" target="_blank">abhishek-das-cse</a>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-icon-circle"><i class="fa-brands fa-github"></i></div>
+            <div>
+              <p class="info-label">GitHub</p>
+              <a href="https://github.com/abhishekdas2104" target="_blank">abhishekdas2104</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vertical tab for contact -->
+    <div class="vertical-side-tab contact-tab">
+      <span>CONTACT</span>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-divider"></div>
+    <div class="footer-inner">
+      <p class="footer-copy">© Developer Portfolio by <a href="https://www.linkedin.com/in/abhishek-das-cse/" target="_blank">Abhishek Das</a></p>
+      <div class="footer-socials">
+        <a href="https://github.com/abhishekdas2104" target="_blank"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/abhishek-das-cse/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/abhishekdas_musicc/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top -->
+  <button id="scroll-top" class="scroll-top-btn" aria-label="Scroll to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
